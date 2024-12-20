@@ -1,0 +1,217 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the body takes full height */
+  overflow: hidden; /* Hide overflow of the body, handle scrolling in containers */
+}
+.district-page {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 40px); /* Position for content alignment */
+}
+
+/* Title Styling */
+.d {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  display: inline-block;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+select {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+select:hover, select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Table Container with Scrolling */
+.table-container {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  max-height: 400px; /* Restrict table height for internal scrolling */
+  overflow-y: auto; /* Enable vertical scrolling for the table */
+  overflow-x: auto; /* Enable horizontal scrolling for wide tables */
+  border: 1px solid #ddd;
+}
+
+/* Table Styles */
+.district-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.district-table th, 
+.district-table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 15px;
+  color: #555;
+  border-bottom: 1px solid #f1f1f1;
+  border-right: 1px solid #ddd;
+}
+
+.district-table th {
+  background-color: #4CAF50;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.district-table td {
+  background-color: #fafafa;
+}
+
+.district-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Rounded Corners for Table */
+.district-table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.district-table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.district-table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.district-table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+/* Action Buttons */
+button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.message-button {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.message-button:hover {
+  background-color: #088d29;
+}
+
+.call-button {
+  background-color: #ffaf04;
+  color: #fff;
+}
+
+.call-button:hover {
+  background-color: #7a5f12;
+}
+.notify-all-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+}
+.call-all-button{
+  padding: 10px 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffaf04;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+.notify-all-button:hover
+ {
+  background-color: #088d29;
+}
+.call-all-button:hover{
+  background-color: #7a5f12;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dropdown-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .district-table th, .district-table td {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}

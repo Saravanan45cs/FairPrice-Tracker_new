@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;  /* or any other position based on your needs */
+  left: 0;
+  width: 100%;
+  opacity: 0.9;
+}
+
+/* Container for the App */
+.App {
+  width: 100%;
+  min-width: 500px;
+  padding: 20px;
+  
+  box-sizing: border-box; /* Include padding in the total width */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Header */
+h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Login Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border-color: #0056b3;
+}
+
+select {
+  background-color: #fafafa;
+}
+
+/* Button */
+button {
+  padding: 12px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f5a209;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Select Dropdown */
+select {
+  background-color: #fafafa;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .App {
+    padding: 30px;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  select {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+.logout-btn {
+  background-color: #f44336; /* Red background for logout */
+  color: white;  /* White text */
+  border: none;  /* Remove border */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex;
+  align-items: center; /* Align icon and text */
+  justify-content: center;
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 20px; /* Space above the button */
+}
+
+.logout-btn i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
